@@ -1,2 +1,8 @@
 def common_end(a, b):
-  return a[0] == b[0] or a[-1] == b[-1]
+  return a[0] == b[0] or a[-1] == b[-1] #Compares values at 0th index and last index
+
+print(common_end([1, 2, 3], [7, 3])) # → True
+print(common_end([1, 2, 3], [7, 3, 2])) # → False
+print(common_end([1, 2, 3], [1, 3])) # → True
+print(common_end([1, 2, 3], [1])) # → True
+print(common_end([1, 2, 3], [2])) # → False
