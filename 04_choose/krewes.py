@@ -3,21 +3,31 @@ Kevin Wang and Samson Wu
 SoftDev
 K04 -- Using dictionaries and random to extract a random devo from a dictionary of krewes
 2022-09-22
-time spent: 
+time spent: 1.5 hrs
 
 DISCO:
 * the dictionary can span multiple lines for readability
 
 QCC:
-What is a krew
+What is a krew?
+Why do I have to typecast the dict_keys object to a list before looping?
+random.choice(list) can alternatively be list[math.floor(random.random() * len(list)]
+random.random() returns a float between 0 inclusive and 1 exclusive
+random and math are built in libraries but need to be imported
+
 OPS SUMMARY:
+
+randomDevoPeriod
 1. Have user select a period
+2. To generate a random value, use 
 2. Generate a random value from 0 to the length of the array
 3. Return that value
+
 """
 
 import random
 import math
+
 krewes = {
     2:["NICHOLAS",  "ANTHONY",  "BRIAN",  "SAMUEL",  "JULIA",  "YUSHA",  "CORINA",  "CRAIG",  "FANG MIN",  "JEFF",  "KONSTANTIN",  "AARON",  "VIVIAN",  "AYMAN",  "TALIA",  "FAIZA",  "ZIYING",  "YUK KWAN",  "DANIEL",  "WEICHEN",  "MAYA",  "ELIZABETH",  "ANDREW",  "VANSH",  "JONATHAN",  "ABID",  "WILLIAM",  "HUI",  "ANSON",  "KEVIN",  "DANIEL",  "IVAN",  "JASMINE",  "JEFFREY", "Ruiwen"], 
     7:["DIANA",  "DAVID",  "SAM",  "PRATTAY",  "ANNA",  "JING YI",  "ADEN",  "EMERSON",  "RUSSELL",  "JACOB",  "WILLIAM",  "NADA",  "SAMANTHA",  "IAN",  "MARC",  "ANJINI",  "JEREMY",  "LAUREN",  "KEVIN",  "RAVINDRA",  "SADI",  "EMILY",  "GITAE",  "MAY",  "MAHIR",  "VIVIAN",  "GABRIEL",  "BRIANNA",  "JUN HONG",  "JOSEPH",  "MATTHEW",  "JAMES",  "THOMAS",  "NICOLE",  "Karen"],
