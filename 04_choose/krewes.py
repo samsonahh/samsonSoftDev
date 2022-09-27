@@ -7,21 +7,23 @@ time spent: 1.5 hrs
 
 DISCO:
 * the dictionary can span multiple lines for readability
-
+* random.choice(list) can alternatively be list[math.floor(random.random() * len(list)]
+* random.random() returns a float between 0 inclusive and 1 exclusive
+* random and math are built in libraries but need to be imported
 QCC:
 What is a krew?
 Why do I have to typecast the dict_keys object to a list before looping?
-random.choice(list) can alternatively be list[math.floor(random.random() * len(list)]
-random.random() returns a float between 0 inclusive and 1 exclusive
-random and math are built in libraries but need to be imported
 
 OPS SUMMARY:
 
 randomDevoPeriod
 1. Have user select a period
-2. To generate a random value, use 
-2. Generate a random value from 0 to the length of the array
-3. Return that value
+2. To generate a random index, use math.floor(random.random() * len(array))
+3. Return that devo at that random index
+
+randomDevoOverall
+1. Generate a random period using math.floor(random.random() * len(array))
+2. Insert that period into the randomDevoPeriod function
 
 """
 
@@ -35,21 +37,31 @@ krewes = {
 }
 
 
-
+#takes a period and returns a random devo from that period
 def randomDevoPeriod(period):
-    devos = krewes[period]
-    if len(devos) == 0:
-        return
+    if (period in krewes.keys()): #validates that the user input is actually an existing period
+        devosFromPeriod = krewes[period] #array of devos
+        index = math.floor(random.random() * len(devosFromPeriod)) #random index of devosFromPeriod
+
+        return devosFromPeriod[index]
     else:
-        index = math.floor(random.random() * len(devos))
-        return devos[index]
+        return None
+
+print(randomDevoPeriod(2))
 
 
+
+"""
+#returns a random devo across any period
 def randomDevoOverall():
+    #generate a random period using the same algorithm
     periods = list(krewes.keys())
     randomIndex = math.floor(random.random() * len(periods))
     randomPeriod = periods[randomIndex]
+
+    #reuse randomDevoPeriod
     return randomDevoPeriod(randomPeriod)
 
-print(randomDevoPeriod(2))
 print(randomDevoOverall())
+
+"""
