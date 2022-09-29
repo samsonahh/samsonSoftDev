@@ -21,6 +21,8 @@ data = file.read()#have to read a file after opening returns a string
 
 #create a function that separates the @@@s and puts them all into a list
 def separate(d):
+    if len(d) < 3 or not '@' in d or not '$' in d: #checks if the data is valid
+        return "Bad data"
     return d.split("@@@")[:-1]#can use split to remove strings and separates the leftovers into a list
 
 def separateAgain(d):
