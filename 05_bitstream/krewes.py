@@ -1,4 +1,17 @@
 #Samson Wu and Harry Zhu
+#Soft Dev
+#Mr. Mykolyk
+#9/29/22
+#Time Spent: 1.5 hrs
+
+#DISCO:
+#you can use string.split("x") to separate string into a list that excludes x
+#you must read a file after opening it
+#
+#QCC:
+#Does the assignment have to be done with a list of dicts?
+#Is using a dict of dicts fine?
+#
 
 import random
 import math
