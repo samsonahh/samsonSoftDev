@@ -3,7 +3,7 @@
 import random
 
 file = open("krewes.txt")
-data = file.read()#have to read a file after opening
+data = file.read()#have to read a file after opening returns a string
 
 #create a function that separates the @@@s and puts them all into a list
 def separate(d):
