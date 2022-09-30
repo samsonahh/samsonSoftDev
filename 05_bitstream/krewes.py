@@ -18,6 +18,8 @@ import math
 
 file = open("krewes.txt")
 data = file.read()#have to read a file after opening returns a string
+file1 = open("devofam.csv")
+data1 = file1.read()
 
 #create a function that separates the @@@s and puts them all into a list
 def separate(d):
