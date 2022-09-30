@@ -25,9 +25,9 @@ def separate(d):
         return "Bad data"
     return d.split("@@@")[:-1]#can use split to remove strings and separates the leftovers into a list
 
-def separateAgain(d):
-    temp = []
-    for data in d:
+def separateAgain(d): #will modify the list created from separate()
+    temp = [] #gonna put lists into this one big list
+    for data in d: #takes each 
         temp+=[data.split("$$$")]#typecast [] to make a list in a list
     return temp
 
