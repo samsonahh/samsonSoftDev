@@ -32,7 +32,7 @@ Samson thinks that nothing will appear at all because it is simply a return.
 
 *What is a localhost?
 *What is a virtual environment and why is it important to Flask?
-*What is favicon.ico>
+*What is favicon.ico?
 *What does the 200 and 404 mean at the end of each line?
 ...
 
