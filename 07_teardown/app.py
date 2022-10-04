@@ -15,7 +15,7 @@ app.run()  # Q5: Where have you seen similar constructs in other languages?
 '''
 DISCO:
 *There is an @ right next to app.route("/") in line 7.
-*We can't directly run the code yet.
+*We can't directly run the code yet.pi
 *Apparently we can setup a virtual environment so that certain libraries can only be used in a certain directory.
 *We can install Flask with pip install Flask.
 *"No hablo queso!" does show on the website. Kevin was right.
@@ -24,8 +24,8 @@ DISCO:
 QCC:
 0. We have never seen the underscore syntax in any other languages.
 1. We think the '/' refers to the current directory the file is in.
-2. We think that it will probably print to the console.
-3. 
+2. This will print to the website page.
+3. We think that it will probably print to the console.
 4. Kevin thinks that the string will show on the website when you goto the '/' directory because of the app.route('/') above it. 
 Samson thinks that nothing will appear at all because it is simply a return.
 5. We have seen something similar in Java when working with objects.
