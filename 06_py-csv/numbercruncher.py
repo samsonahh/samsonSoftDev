@@ -1,4 +1,4 @@
-#Samson Wu and Harry Zhu
+#Samson Wu and Harry Zhu TNPG: WuZhu
 #Soft Dev
 #Mr. Mykolyk
 #9/30/22
