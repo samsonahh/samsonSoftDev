@@ -41,6 +41,6 @@ app = Flask(__name__) # ...
 
 @app.route("/") # ...
 def TNPG():
-    return "TNPG: Worship Warship, Roster: Samson, Joshua, Aahan <br/>" + "List of occupations:<br/>" + list_occupation + "Random Occupation: " + main()
+    return "TNPG: Worship Warship, Roster: Samson, Joshua, Aahan <br/><br/>" + "List of occupations:<br/>" + list_occupation + "<br/>Random Occupation: " + main()
 
 app.run()
