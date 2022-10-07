@@ -45,6 +45,7 @@ def TNPG():
     print(__name__)
     return "TNPG: Worship Warship, Roster: Samson, Joshua, Aahan <br/><br/>" +\
      "List of occupations:<br/>" + list_occupation + "<br/>Random Occupation: " + \
-        "<a href=https://www.google.com/search?q="+ job.replace(" ", "+") + "+jobs+near+me>" + job + "</a>"
+        "<a href=https://www.google.com/search?q="+ job.replace(" ", "+") + "+jobs+near+me target=_blank rel=noopener noreferrer>" + job + "</a>"
 
+app.debug = True
 app.run()
