@@ -1,4 +1,4 @@
-# Clyde 'Thluffy' Sinclair
+# Worship Warships: Samson, Aahan, Joshua
 # SoftDev
 # Oct 2022
 
@@ -11,6 +11,6 @@ def hello_world():
     print(__name__)
     return "No hablo queso!"
 
-if __name__ == "__main__":  # true if this file NOT imported
-    app.debug = True        # enable auto-reload upon code change
+if __name__ == "__main__":  # true if this file NOT imported / What does this mean?
+    app.debug = True        # enable auto-reload upon code change / very useful for live updates
     app.run()

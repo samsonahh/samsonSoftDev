@@ -1,6 +1,6 @@
 #TNPG: Worship Warship
 #Roster: Samson, Joshua, Aahan
-#Time Spent: 1 hr
+#Time Spent: 1.5 hrs
 '''
 DISCO:
 *returning a list will display a cool looking json page
@@ -41,6 +41,10 @@ app = Flask(__name__) # ...
 
 @app.route("/") # ...
 def TNPG():
-    return "TNPG: Worship Warship, Roster: Samson, Joshua, Aahan <br/><br/>" + "List of occupations:<br/>" + list_occupation + "<br/>Random Occupation: " + main()
+    job = main()
+    print(__name__)
+    return "TNPG: Worship Warship, Roster: Samson, Joshua, Aahan <br/><br/>" +\
+     "List of occupations:<br/>" + list_occupation + "<br/>Random Occupation: " + \
+        "<a href=https://www.google.com/search?q="+ job.replace(" ", "+") + "+jobs+near+me>" + job + "</a>"
 
 app.run()

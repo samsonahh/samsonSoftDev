@@ -1,4 +1,4 @@
-# Clyde 'Thluffy' Sinclair
+# Worship Warships: Samson, Aahan, Joshua
 # SoftDev
 # Oct 2022
 
