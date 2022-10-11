@@ -1,1 +1,6 @@
 TNPG: Worship Warship, Roster: Samson, Joshua, Aahan 
+Time Spent: 1 hr
+DISCO:
+returning a list will display a cool looking json page
+we can change the route from "/" to "/anyplace" so when we goto localhost:5000/anyplace it displays what we returned under the "/anyplace" route.
+<br/> creates a new line instead of \n

@@ -1,0 +1,20 @@
+TNPG: Worship Warship, Roster: Samson, Joshua, Aahan 
+
+Predictions:
+*.html files will display like normal
+*foo without the extension will display plain text
+
+DISCO:
+*When trying to access foo through localhost:5000/static/foo we are prompted to download a file named foo. Prediction was wrong.
+*When trying to access foo.html through localhost:5000/static/foo.html we get a white page with text
+*Apparently you don't need a <body> in the html file to display text on a site
+*When trying to access the dir static through localhost:5000/static no site exists
+*Wrapping text in  <!-- --> will make it a comment in an html file
+*When we put our fixie.html in the parent dir of static, localhost:5000/fixie.html does not work
+*When we put fixie.html in a new test folder named 'test', going into localhost:5000/test/fixie.html does not work
+*When we change the route to /static/fixie.html, No habo queso replaces the contents in fixie.html that we had orignally
+*When we added <!DOCTYPE html><html></html> to foo without the extension, the web browser still asks us to download foo
+
+QCC:
+*Is there a way to access a dir from the website. Ex: localhost:5000/dir_name
+*Is static a special dir that Flask looks for when running?

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+this hurrr some plaintext tho
+
+Q: What happens when you access this file
+     via
+      http://localhost:5000/static/foo 
+     ?
+When trying to access foo through localhost:5000/static/foo we are prompted to download a file named foo
+</html>
