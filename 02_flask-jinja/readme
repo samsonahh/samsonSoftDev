@@ -1,0 +1,14 @@
+# TNPG: Worship Warships, Samson, Joshua, Aahan
+# SoftDev
+# Oct 2022
+# Time Spent:
+
+Q0: If you remove render_template it will not use the template formatting.
+Q1: We all predict that the url will be localhost:5000/my_foist_template
+Q2: The first argument tells you which file in the 'templates' dir to look at. 
+The second argument looks for the foo title variable and names it "fooooo".
+The third argument looks for the collection varible and plugs in the 'coll' list declared earlier in app.py.
+
+DISCO:
+*When we remove render_template we get an error page on localhost:5000/my_foist_template
+*When we open the html file without running the Flask server, we see something different
