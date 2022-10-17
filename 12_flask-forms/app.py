@@ -17,7 +17,7 @@ def display_login_page():
     print(request.headers)
     return render_template( "login.html" )
 
-@app.route("/auth") #, methods=[ 'POST'])
+@app.route("/auth") #, methods=['POST', "GET"])
 def authenticate():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
