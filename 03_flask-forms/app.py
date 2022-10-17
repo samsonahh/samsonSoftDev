@@ -1,4 +1,4 @@
-# TNPG: Worship Warship, Roster: Samson, Joshua, Aahan 
+# TNPG: Steve, Roster: Samson, Joseph, Ryan
 # Time Spent: 
 # DISCO:
 
