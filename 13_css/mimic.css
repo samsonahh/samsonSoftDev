@@ -13,8 +13,13 @@ h2{
     font-size:20px;
 }
 
+td{
+    vertical-align: top;
+}
+
 table, tr{
     background-color: rgb(85, 85, 85);
+    border-spacing: 0;
 }
 
 .darkgray{
