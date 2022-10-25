@@ -12,3 +12,5 @@
 # We can use DictReader(string) to return a list of dictionaries. Then we can loop through the list and print each row individually.
 # 
 # '\"' allows us to put the double quotes (") character into a string
+# 
+# Running two sqlite3 shells at the same time will carry over any changes made on one of the shells.
