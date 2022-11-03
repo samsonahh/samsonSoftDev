@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, session
 app = Flask(__name__)
 app.secret_key = b'_MinecraftSTEVE'
 
+
 @app.route('/')
 def index():
     if 'username' in session:
