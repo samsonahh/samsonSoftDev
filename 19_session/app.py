@@ -1,34 +1,42 @@
 # TNPG: Steve, Roster: Samson, Joseph, Ryan
 
-from flask import Flask, render_template, request, session
+
+from flask import Flask, render_template, request, session, redirect, url_for
 
 app = Flask(__name__)
 app.secret_key = b'_MinecraftSTEVE'
 
 
+
 @app.route('/')
 def index():
+    login_status = False
     if 'username' in session:
-        return f'Logged in as {session["username"]}'
-    return 'You are not logged in'
+        login_status = True
+        return render_template("response.html", loginstatus=login_status, user=session['username'])
+    return redirect(url_for('login')) #'You are not logged in'
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
+        print(request.form['username'])
         session['username'] = request.form['username']
         return redirect(url_for('index'))
-    return '''
-        <form method="post">
-            <p><input type=text name=username>
-            <p><input type=submit value=Login>
-        </form>
-    '''
+    return render_template("login.html")
 
 @app.route('/logout')
 def logout():
     # remove the username from the session if it's there
     session.pop('username', None)
+    login_status = False
     return redirect(url_for('index'))
+
+
+if __name__ == "__main__": #false if this file imported as module
+    #enable debugging, auto-restarting of server when this file is modified
+    app.debug = True 
+    app.run()
+
 
 # def display_login_page():
 #     print("\n\n\n")
@@ -59,8 +67,3 @@ def logout():
 #     print("***DIAG: request.headers ***")
 #     print(request.headers) #Accesses the args and puts them in a list
 #     return render_template( "response.html", user=username )  #response to a form submission
-
-if __name__ == "__main__": #false if this file imported as module
-    #enable debugging, auto-restarting of server when this file is modified
-    app.debug = True 
-    app.run()
