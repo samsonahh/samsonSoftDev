@@ -6,6 +6,8 @@ from flask import Flask, render_template, request, session, redirect, url_for
 app = Flask(__name__)
 app.secret_key = b'_MinecraftSTEVE'
 
+validuser = 'admin'
+validpass = 'admin'
 
 
 @app.route('/')
@@ -18,11 +20,14 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    if request.method == 'POST':
+    if request.method == 'POST' and request.form['username'] == validuser and request.form['password'] == validpass:
         print(request.form['username'])
+        print(request.form['password'])
         session['username'] = request.form['username']
         return redirect(url_for('index'))
-    return render_template("login.html")
+    if request.method == 'POST' and not request.form['username'] == validuser and not request.form['password'] == validpass:
+        return render_template('login.html', failmsg='Wrong username and password!')
+    return render_template("login.html", failmsg='')
 
 @app.route('/logout')
 def logout():
