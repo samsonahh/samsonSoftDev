@@ -21,9 +21,10 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST' and request.form['username'] == validuser and request.form['password'] == validpass:
-        print(request.form['username'])
-        print(request.form['password'])
+        # print(request.form['username'])
+        # print(request.form['password'])
         session['username'] = request.form['username']
+        print("Cookie stuff: " + str(session))
         return redirect(url_for('index'))
     if request.method == 'POST' and not request.form['username'] == validuser and not request.form['password'] == validpass:
         return render_template('login.html', failmsg='Wrong username and password!')
