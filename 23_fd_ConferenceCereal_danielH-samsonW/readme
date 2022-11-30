@@ -5,6 +5,8 @@ K23 -- A Day of Noodling
 time spent: 
 
 DISCOS:
+*text-center class centers the whole text (can do text-left and others)
+*you can put multiple classes
 Top Bar:
 *Dropdown menu requires JS
 Table:
