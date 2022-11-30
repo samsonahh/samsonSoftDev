@@ -25,4 +25,3 @@ Grids:
 *the div class grid-x uses another div class named cell to create sections
 *these cells add up to 12 and you can specify the cell sizes according to the window size (small, medium, large)
 *you can also auto size them using div class cell auto
-Forms: (ADD FORMS)
