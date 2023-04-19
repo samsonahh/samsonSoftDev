@@ -88,6 +88,32 @@ var stripe = function() {
 // FIB
 // FAC
 // GCD
+function fact(n){
+  if(n<2){
+      return 1;
+  }
+  return n*fact(n-1);
+}
+
+function fib(n){
+  if(n<2){
+      return 1;
+  }
+  return fib(n-1) + fib(n-2);
+}
+
+function gcd(x, y){
+  if ((typeof x !== 'number') || (typeof y !== 'number')) 
+    return false;
+  x = Math.abs(x);
+  y = Math.abs(y);
+  while(y) {
+    var t = y;
+    y = x % y;
+    x = t;
+  }
+  return x;
+}
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
@@ -96,5 +122,17 @@ const myFxn = (param1, param2) => {
   // body
   return retVal;
 };
+
+var addButton = document.getElementById("addItem");
+var addInput = document.getElementById("addItemInput");
+
+addButton.addEventListener('click', () => addItem(addInput.value));
+
+var remButton = document.getElementById("removeItem");
+var remInput = document.getElementById("removeItemInput");
+
+remButton.addEventListener('click', () => removeItem(remInput.value-1));
+
+
 
 
