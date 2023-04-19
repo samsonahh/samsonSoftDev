@@ -95,6 +95,9 @@ function fact(n){
   return n*fact(n-1);
 }
 
+var factorial = (n) => {
+  return fact(n);}
+
 function fib(n){
   if(n<2){
       return 1;
@@ -133,6 +136,26 @@ var remInput = document.getElementById("removeItemInput");
 
 remButton.addEventListener('click', () => removeItem(remInput.value-1));
 
+var redButton = document.getElementById("redItems");
 
+redButton.addEventListener('click', red);
 
+var stripeButton = document.getElementById("stripeItems");
 
+redButton.addEventListener('click', stripe);
+
+var factButton = document.getElementById("factButton");
+var factInput = document.getElementById("factInput");
+
+factButton.addEventListener('click', () => addItem(fact(factInput.value)));
+
+var fibButton = document.getElementById("fibButton");
+var fibInput = document.getElementById("fibInput");
+
+fibButton.addEventListener('click', () => addItem(fib(fibInput.value)));
+
+var GCNButton = document.getElementById("GCNButton");
+var GCN1 = document.getElementById("GCN1");
+var GCN2 = document.getElementById("GCN2");
+
+GCNButton.addEventListener('click', () => addItem(gcd(Number(GCN1.value), Number(GCN2.value))));
