@@ -142,7 +142,7 @@ redButton.addEventListener('click', red);
 
 var stripeButton = document.getElementById("stripeItems");
 
-redButton.addEventListener('click', stripe);
+stripeButton.addEventListener('click', stripe);
 
 var factButton = document.getElementById("factButton");
 var factInput = document.getElementById("factInput");
