@@ -46,8 +46,6 @@ var drawCircle = (e) => {
     ctx.arc(mouseX, mouseY, 50, 0, 2 * Math.PI);
 
     ctx.stroke();
-
-
     console.log("mouseClick registered at ", mouseX, mouseY);
 }
 
@@ -62,6 +60,8 @@ var draw = (e) => {
 }
 
 var wipeCanvas = function(){
+    //draws an empty rect from (0,0) to (w, h) of canvas
+    ctx.clearRect(0, 0, c.width, c.height);
     console.log("WIPING!");
 }
 
