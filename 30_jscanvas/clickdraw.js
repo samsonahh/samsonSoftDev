@@ -20,18 +20,9 @@ var drawRect = function(e) {
     var mouseY = e.offsetY;
 
     ctx.beginPath();
-
-    ctx.moveTo(mouseX, mouseY);
-    ctx.lineTo(mouseX + 100, mouseY);
-
-    ctx.moveTo(mouseX + 100, mouseY);
-    ctx.lineTo(mouseX + 100, mouseY + 100);
-
-    ctx.moveTo(mouseX + 100, mouseY + 100);
-    ctx.lineTo(mouseX, mouseY + 100);
-
-    ctx.moveTo(mouseX, mouseY + 100);
-    ctx.lineTo(mouseX, mouseY);
+    ctx.rect(mouseX, mouseY, 100, 100);
+    ctx.fillStyle = "red";
+    ctx.fill();
     ctx.stroke();
 
     console.log("mouseClick registered at ", mouseX, mouseY);
@@ -42,9 +33,10 @@ var drawCircle = (e) => {
     var mouseY = e.offsetY;
 
     ctx.beginPath();
-
     ctx.arc(mouseX, mouseY, 50, 0, 2 * Math.PI);
-
+    ctx.fillStyle = "blue";
+    ctx.fill();
+    
     ctx.stroke();
     console.log("mouseClick registered at ", mouseX, mouseY);
 }
