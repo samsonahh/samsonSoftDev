@@ -55,14 +55,14 @@ var stopAnim = (e) => {
     //console.log("STOPPED", requestID);
 }
 
-var rectW = 150;
-var rectH = 75;
+var rectW = 100;
+var rectH = 50;
 
 var rectX;
 var rectY;
 
-var xVel = 1;
-var yVel = 1;
+var xVel;
+var yVel;
 
 var logo = new Image();
 logo.src = "logo_dvd.jpg";
@@ -70,6 +70,21 @@ logo.src = "logo_dvd.jpg";
 var setupDVD = (e) => {
     rectX = Math.random() * (c.width - rectW);
     rectY = Math.random() * (c.height - rectH);
+
+    if(Math.random() < 0.5){
+        xVel = -1;
+    }
+    else{
+        xVel = 1;
+    }
+    if(Math.random() < 0.5){
+        yVel = -1;
+    }
+    else{
+        yVel = 1;
+    }
+
+    console.log(xVel, yVel);
     startDVD(e);
 }
 
